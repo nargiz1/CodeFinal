@@ -1,0 +1,12 @@
+﻿@model Student
+<div class="row">
+    <div class="col-md-8">
+        <img src="~/img/students/@Model.Image" width="200px" style="border-radius: 100%" />
+        <h4>Name: <b>@Model.FullName</b></h4>
+        <h4>Mail: <b>@Model.Mail</b></h4>
+        <h4>Number: <b>@Model.Number</b></h4>
+        <h4>CAP: <b>@Model.CAP</b></h4>
+        <h4>Group: <b>@Model.Group.Name</b></h4>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

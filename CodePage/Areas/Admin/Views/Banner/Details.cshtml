@@ -1,0 +1,14 @@
+﻿@model Banner
+<div class="row">
+    <div class="col-md-8">
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>Subtitle: <b>@Model.Subtitle</b></h4>
+        <h4>Created: <b>@Model.CreateDate.ToString("dd/MM/yyyy")</b></h4>
+        <h4>Last Update: <b>@Model.UpdateDate.ToString("dd/MM/yyyy")</b></h4>
+        <div class="d-flex">
+            <h4 class="me-2">Color: </h4> 
+            <div style="background-color: @Model.Color; width: 80px; height: 20px" class="mt-2"></div>
+        </div>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

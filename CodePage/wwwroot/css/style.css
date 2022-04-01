@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.navbar .nav-image{
+    width: 150px;
+    transition: all .3s ease;
+    filter: grayscale(100%);
+}
+.navbar .nav-image:hover{
+    filter: grayscale(0%);
+}
+.navbar.scrolled{
+    background-color: #F4F5F8!important;
+}
+.navbar.scrolled a{
+    color: grey!important;
+}
+#banner .banner-wrapper{
+    height: 100vh;
+}
+#banner .banner-wrapper .banner-heading{
+    font-size: 80px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: white;
+}
+#banner .banner-wrapper .banner-text{
+    font-size: 20px;
+    color: white;
+}
+.designed h2{
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+.designed h3{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.designed p{
+    margin-top: 30px;
+}
+.education-text h3{
+    margin-bottom: 40px;
+}
+.education-text h2{
+    margin-bottom: 10px;
+}
+#education a{
+    display: inline-block;
+    text-decoration: none;
+}
+#education .ed-category-wrapper{
+    border: 1px solid rgba(158, 158, 158, 0.644);
+}
+#education .ed-category-wrapper-even{
+    border-left: none;
+}
+#education .ed-category-wrapper-up{
+    border-bottom: none;
+}
+#education .ed-category{
+    padding: 20px;
+    transition: all .3s ease!important;
+}
+#education .ed-category-one:hover{
+    background-color: rgb(155, 5, 155);
+    transform: scale(1.2);
+}
+#education .ed-category-two:hover{
+    background-color: rgb(247, 247, 15);
+    transform: scale(1.2);
+}
+#education .ed-category-three:hover{
+    background-color:rgb(118, 200, 233);
+    transform: scale(1.2);
+}
+#education .ed-category-four:hover{
+    background-color: rgb(47, 243, 47);
+    transform: scale(1.2);
+}
+#education .ed-category:hover h4{
+    color: white;
+}
+#education .ed-category:hover img{
+    filter: invert(100%) sepia(6%) saturate(7448%) hue-rotate(2deg) brightness(110%) contrast(112%);
+}
+#education .ed-category h4{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(54, 54, 54);
+    margin-top: 40px;
+}
+#why .card-item{
+    padding: 20px;
+}
+#why .card-item h5{
+    font-weight: bold;
+}
+#why .card-item .text{
+    margin-left: 10px;
+}
+#why .card-item a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+#contact{
+    background-color: #F4F5F8;
+}
+#contact input,select{
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 100%;
+    color: rgba(131, 128, 128, 0.644) ;
+}
+#contact input:focus{
+    outline: 1px solid rgba(158, 158, 158, 0.644)!important;
+}
+#contact select:focus{
+    outline: 1px solid rgba(158, 158, 158, 0.644)!important;
+}
+#contact button{
+    border: none;
+    background-color: orange;
+    color: white;
+    font-size: 25px;
+    padding: 10px 15px;
+    width: 100%;
+}
+#groupBanner,#studentBanner,#studentDetails{
+    background-color: rgb(74, 207, 119);
+}
+.group{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+    padding: 30px 10px ;
+    border-radius: 10%;
+}
+#studentBanner h5{
+    color: white;
+}
+.student{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+    padding: 0px 0px 20px 0px;
+    border-radius: 10%;
+}
+.student img{
+    border-radius: 10%;
+}
+#studentDetails img{
+    border-radius: 10%;
+}
+#studentDetails h5{
+    color: white;
+}

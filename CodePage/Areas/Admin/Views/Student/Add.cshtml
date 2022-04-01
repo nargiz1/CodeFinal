@@ -1,0 +1,64 @@
+﻿@model Student
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add Category</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Add" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <label asp-for="FullName"></label>
+                    <input class="form-control" asp-for="FullName">
+                    <span class="text-danger small" asp-validation-for="FullName"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="Mail"></label>
+                    <input class="form-control" asp-for="Mail">
+                    <span class="text-danger small" asp-validation-for="Mail"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="Number"></label>
+                    <input class="form-control" asp-for="Number">
+                    <span class="text-danger small" asp-validation-for="Number"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="CAP"></label>
+                    <input class="form-control" asp-for="CAP">
+                    <span class="text-danger small" asp-validation-for="CAP"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="ImageFile"></label>
+                    <input class="form-control" asp-for="ImageFile">
+                    <span class="text-danger small" asp-validation-for="ImageFile"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GroupId" class="control-label">Group</label>
+                    <select asp-for="GroupId" class="form-control" asp-items="ViewBag.GroupId"></select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <a asp-action="Index" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <style>
+        .ck-editor__editable {
+            min-height: 200px;
+        }
+    </style>
+}

@@ -1,0 +1,9 @@
+﻿@model Category
+<div class="row">
+    <div class="col-md-8">
+        <img src="~/images/@Model.Image" />
+        <h4>Name: <b>@Model.Name</b></h4>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+        <a asp-action="DeleteConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model List<Student>
+<section id="studentBanner">
+    <div class="container d-flex align-items-center" style="height: 50vh;">
+        <div>
+            <h1 class="fw-bold text-light" style="font-size: 65px;">@((ViewBag.Group).Name)</h1>
+            <h5>Muellim: Mammed Aliyev</h5>
+            <h5>Telebe sayi: @((ViewBag.Group).StudentCount)</h5>
+            <h5>Qrup Sahesi: @((ViewBag.Group).Category.Name)</h5>
+        </div>
+    </div>
+</section>
+<section id="groups">
+    <div class="container">
+        <div class="d-flex my-5">
+            <h5 class="me-5 fw-bold">Students:</h5>
+        </div>
+        <div class="row">
+            @foreach (Student item in Model)
+            {
+                <div class="col-md-4 mb-5">
+                    <div class="student align-items-center">
+                        <div class="text-center">
+                            <img src="~/img/students/@item.Image" class="mb-4 w-100">
+                            <h4>@item.FullName</h4>
+                            <p>@item.Mail</p>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success mt-3">Etrafli</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

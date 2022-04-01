@@ -1,0 +1,34 @@
+﻿@model List<Group>
+<section id="groupBanner">
+    <div class="container d-flex align-items-center" style="height: 50vh;">
+        <h1 class="fw-bold text-light" style="font-size: 65px;">Groups</h1>
+    </div>
+</section>
+<section id="groups">
+    <div class="container">
+        <div class="d-flex my-5">
+            @foreach (Category item in (List<Category>)ViewBag.Categories)
+            {
+                <h5 class="me-5 @(ViewBag.Category==item.Id?"fw-bold":"")">@item.Name</h5>
+            }
+        </div>
+        <div class="row">
+            @foreach (Group item in Model)
+            {
+                <div class="col-md-4 mb-5">
+                    <div class="group align-items-center">
+                        <div class="text-center">
+                            <img src="~/images/@item.Category.Image" class="mb-4">
+                            <h4>@item.Name</h4>
+                            <p class="mb-0">Mamed Aliyev</p>
+                            <p>Telebe sayi: @item.StudentCount</p>
+                            <a class="btn btn-success mt-3" asp-controller="Student" asp-action="Index" asp-route-id="@item.Id">Etrafli</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            
+        </div>
+    </div>
+</section>

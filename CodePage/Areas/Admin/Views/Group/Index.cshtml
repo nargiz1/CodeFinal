@@ -1,0 +1,49 @@
+﻿@model List<Group>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Categories</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student Count</th>
+                        <th>Category</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student Count</th>
+                        <th>Category</th>
+                        <th>Settings</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (Group item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.StudentCount</td>
+                            <td>@item.Category.Name</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary mr-1">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning mr-1">
+                                    <i class="fas fa-fw fa-wrench"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mr-1">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

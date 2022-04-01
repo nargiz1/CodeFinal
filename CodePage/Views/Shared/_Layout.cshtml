@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Zen+Antique&display=swap" rel="stylesheet">
+    <title>Code</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="~/images/logo.png" class="nav-image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" asp-controller="Home">Ana səhifə/</a>
+                    <a class="nav-link" href="#education">Haqqımızda/</a>
+                    <a class="nav-link" href="#contact">Bizimlə əlaqə/</a>
+                    <a class="nav-link" asp-controller="Group" asp-action="Index">Qruplarımız</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <input type="hidden" id="messageAdded" value="@TempData["messageAdded"]" />
+    @RenderBody()
+</body>
+<footer>
+    <div class="container py-4">
+        <span>2022 | Made with love by P411</span>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/main.js"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+</html>
