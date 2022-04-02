@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Code\\aspFinal\\CodePage\\CodePage\\CodePage.csproj": {}
+    "C:\\Users\\Nargizer\\Desktop\\aspFinal\\CodePage\\CodePage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Code\\aspFinal\\CodePage\\CodePage\\CodePage.csproj": {
+    "C:\\Users\\Nargizer\\Desktop\\aspFinal\\CodePage\\CodePage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Code\\aspFinal\\CodePage\\CodePage\\CodePage.csproj",
+        "projectUniqueName": "C:\\Users\\Nargizer\\Desktop\\aspFinal\\CodePage\\CodePage.csproj",
         "projectName": "CodePage",
-        "projectPath": "C:\\Users\\user\\Desktop\\Code\\aspFinal\\CodePage\\CodePage\\CodePage.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Code\\aspFinal\\CodePage\\CodePage\\obj\\",
+        "projectPath": "C:\\Users\\Nargizer\\Desktop\\aspFinal\\CodePage\\CodePage.csproj",
+        "packagesPath": "C:\\Users\\Nargizer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nargizer\\Desktop\\aspFinal\\CodePage\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Nargizer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

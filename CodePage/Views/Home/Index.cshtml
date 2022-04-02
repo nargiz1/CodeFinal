@@ -33,14 +33,14 @@
                         <div class="row">
                             @foreach (Category item in Model.Categories)
                             {
-                            <div class="col-6 ed-category-wrapper ed-category-one ed-category">
-                                <a asp-controller="Group" asp-action="Index" asp-route-id="@item.Id">
-                                    <div>
-                                        <img src="~/images/@item.Image">
-                                        <h4>@item.Name</h4>
-                                    </div>
-                                </a>
-                            </div>
+                                <div class="col-6 ed-category-wrapper ed-category-@(ViewBag.Color<5?(ViewBag.Color+=1):((ViewBag.Color-=4))) ed-category">
+                                    <a asp-controller="Group" asp-action="Index" asp-route-id="@item.Id">
+                                        <div>
+                                            <img src="~/images/@item.Image">
+                                            <h4>@item.Name</h4>
+                                        </div>
+                                    </a>
+                                </div>
                             }
                         </div>
                     </div>
@@ -64,70 +64,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 pb-4">
-                <div class="row card-item">
-                    <div class="col-6">
-                        <div class="image">
-                            <img src="images/one.jpg" class="w-100">
+            @foreach (AboutUs item in Model.AboutUs)
+            {
+                <div class="col-md-6 pb-4">
+                    <div class="row card-item">
+                        <div class="col-6">
+                            <div class="image">
+                                <img src="~/img/aboutUs/@item.Image" class="w-100">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="text">
-                            <h5>Buraxılış layihəsi</h5>
-                            <p>Buraxılış layihəsi “Code Academy”dəki təhsilin yekun layihəsi hesab olunur və çox önəmli rol oynayır. Təqdimat təhsil boyunca keçirilən bütün mövzuları özündə cəmləyir. Buraxılış layihəsi tədrisi</p>
-                            <a href="#">Ətraflı</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pb-4">
-                <div class="row card-item">
-                    <div class="col-6">
-                        <div class="image">
-                            <img src="images/two.jpg" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="text">
-                            <h5>Praktiki tədris metodu</h5>
-                            <p>Hər hansı bir peşəni yaxşı bacarmaq üçün yalnız öyrənmək kifayət deyil, gərək öyrəndiklərinizi tətbiq edə bilmə bacarığına da yiyələnib təcrübə toplayasınız. Buna görə Code Academy-nin</p>
-                            <a href="#">Ətraflı</a>
+                        <div class="col-6">
+                            <div class="text">
+                                <h5>@item.Title</h5>
+                                <p>@Html.Raw(item.Text.Substring(0, 200))...</p>
+                                <a asp-controller="AboutUs" asp-action="Index" asp-route-id="@item.Id">Ətraflı</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row card-item">
-                    <div class="col-6">
-                        <div class="image">
-                            <img src="images/three.jpeg" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="text">
-                            <h5>Akademik Transkript</h5>
-                            <p>Tapşırıqlar, mini layihələr müəllim tərəfindən yoxlanılması sizin bilik və bacarıqlarının hansı dərəcədə olduğunu və həm tədrs müddətində, həm də məzun olduqdan sonra hansı sahələri daha</p>
-                            <a href="#">Ətraflı</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row card-item">
-                    <div class="col-6">
-                        <div class="image">
-                            <img src="images/four.jpeg" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="text">
-                            <h5>Mentor Sistemi</h5>
-                            <p>Mentor Sistemi Code Academy-də tələbələrin təhsildə öyrəndiklərini təkrar etmələrini və gücləndirmələrini təmin edən xüsusi bir sistemdir.</p>
-                            <a href="#">Ətraflı</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
 
     </div>

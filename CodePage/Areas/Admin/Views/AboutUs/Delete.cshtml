@@ -1,0 +1,10 @@
+﻿@model AboutUs
+<div class="row">
+    <div class="col-md-8">
+        <img src="~/img/aboutUs/@Model.Image" width="200px" />
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>Text: <b>@Html.Raw(Model.Text)</b></h4>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+        <a asp-action="DeleteConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </div>
+</div>

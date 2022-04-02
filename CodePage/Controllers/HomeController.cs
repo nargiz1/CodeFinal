@@ -19,10 +19,12 @@ namespace CodePage.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.Color = 0;
             ViewModel vm = new ViewModel()
             {
                 Banners=db.Banners.ToList(),
                 Categories=db.Categories.ToList(),
+                AboutUs=db.AboutUs.ToList(),
             };
             return View(vm);
         }

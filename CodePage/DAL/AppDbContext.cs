@@ -18,5 +18,6 @@ namespace CodePage.DAL
         public DbSet<TeacherToGroup> TeacherToGroups { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<AboutUs> AboutUs { get; set; }
     }
 }

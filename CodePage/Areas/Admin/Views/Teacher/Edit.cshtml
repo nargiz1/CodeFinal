@@ -1,0 +1,80 @@
+﻿@model Teacher
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add Teacher</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <label asp-for="Name"></label>
+                    <input class="form-control" asp-for="Name">
+                    <span class="text-danger small" asp-validation-for="Name"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="Mail"></label>
+                    <input class="form-control" asp-for="Mail">
+                    <span class="text-danger small" asp-validation-for="Mail"></span>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label asp-for="Number"></label>
+                    <input class="form-control" asp-for="Number">
+                    <span class="text-danger small" asp-validation-for="Number"></span>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <label>Select groups</label>
+                    <h4 id="goups-visual" class="my-3">
+                        @foreach (TeacherToGroup item in Model.TeacherToGroups)
+                        {
+                            if (item.TeacherId == Model.Id)
+                            {
+                                <span data-id="@item.GroupId" class='group-category-item badge badge-warning mr-2' style='cursor:pointer'>@item.Group.Name</span>
+                            }
+                        }
+                    </h4>
+                    <input type="hidden" name="groupIds" id="groupIds" value="@ViewBag.TeacherToGroup" />
+                    <select class="form-control" id="groupSelect">
+                        <option value="">Please select a group</option>
+                        @foreach (Group item in (List<Group>)ViewData["Groups"])
+                        {
+                            <option data-name="@item.Name" value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <a asp-action="Index" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .catch(error => {
+                console.error(error);
+            });
+        $("#groupSelect").change(function () {
+            if (!$("#groupIds").val().includes($("#groupSelect").val() + ",")) {
+                $("#groupIds").val($("#groupIds").val() + $("#groupSelect").val() + ",");
+                $("#goups-visual").append("<span data-id='" + $("#groupSelect").val() + "' class='group-category-item badge badge-warning mr-2' style='cursor:pointer'>" + $("#groupSelect option:selected").text() + "</span>")
+            }
+        });
+        $(document).on("click", ".group-category-item", function () {
+            $("#groupIds").val($("#groupIds").val().replace($(this).data("id") + ",", ""));
+            $(this).remove();
+        })
+    </script>
+    <style>
+        .ck-editor__editable {
+            min-height: 200px;
+        }
+    </style>
+}

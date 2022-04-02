@@ -74,19 +74,19 @@ button:focus {
     padding: 20px;
     transition: all .3s ease!important;
 }
-#education .ed-category-one:hover{
+#education .ed-category-1:hover{
     background-color: rgb(155, 5, 155);
     transform: scale(1.2);
 }
-#education .ed-category-two:hover{
+#education .ed-category-2:hover{
     background-color: rgb(247, 247, 15);
     transform: scale(1.2);
 }
-#education .ed-category-three:hover{
+#education .ed-category-3:hover{
     background-color:rgb(118, 200, 233);
     transform: scale(1.2);
 }
-#education .ed-category-four:hover{
+#education .ed-category-4:hover{
     background-color: rgb(47, 243, 47);
     transform: scale(1.2);
 }

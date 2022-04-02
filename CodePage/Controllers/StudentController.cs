@@ -25,7 +25,7 @@ namespace CodePage.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return RedirectToAction("Index", "Group");
-            return View(await db.Students.Include(x => x.Group).FirstOrDefaultAsync(x => x.Id == id));
+            return View(await db.Students.Include(x => x.Group).Include(x=> x.Group.Category).FirstOrDefaultAsync(x => x.Id == id));
         }
     }
 }

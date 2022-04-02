@@ -10,5 +10,6 @@ namespace CodePage.HomeViewModel
     {
         public List<Banner> Banners { get; set; }
         public List<Category> Categories { get; set; }
+        public List<AboutUs> AboutUs { get; set; }
     }
 }

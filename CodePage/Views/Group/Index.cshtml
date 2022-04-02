@@ -20,7 +20,11 @@
                         <div class="text-center">
                             <img src="~/images/@item.Category.Image" class="mb-4">
                             <h4>@item.Name</h4>
-                            <p class="mb-0">Mamed Aliyev</p>
+                            @*@foreach (TeacherToGroup teacher in item.TeacherToGroups)
+                            {
+                                <p class="mb-0">@teacher.Teacher.Name</p>
+                            }*@
+
                             <p>Telebe sayi: @item.StudentCount</p>
                             <a class="btn btn-success mt-3" asp-controller="Student" asp-action="Index" asp-route-id="@item.Id">Etrafli</a>
                         </div>

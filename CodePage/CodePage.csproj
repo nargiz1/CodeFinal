@@ -5,8 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Data\" />
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <None Remove="Areas\Admin\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\img\categories\" />
+    <Folder Include="wwwroot\img\aboutUs\" />
     <Folder Include="wwwroot\img\students\" />
   </ItemGroup>
 

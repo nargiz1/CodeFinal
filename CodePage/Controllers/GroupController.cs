@@ -19,7 +19,7 @@ namespace CodePage.Controllers
         {
             ViewBag.Categories = db.Categories.ToList();
             ViewBag.Category = id;
-            return View(db.Groups.Include(x=> x.Category).Where(x=> x.CategoryId==id).ToList());
+            return View(db.Groups.Include(x=> x.Category).Include(x=> x.TeacherToGroups).Where(x=> x.CategoryId==id).ToList());
         }
     }
 }
