@@ -7,9 +7,10 @@
 <section id="groups">
     <div class="container">
         <div class="d-flex my-5">
+            <a asp-controller="Group" asp-action="Index" asp-route-id="null" style="text-decoration:none; color: black"><h5 class="me-5 @(ViewBag.Category==null?"fw-bold":"")">All</h5></a>
             @foreach (Category item in (List<Category>)ViewBag.Categories)
             {
-                <h5 class="me-5 @(ViewBag.Category==item.Id?"fw-bold":"")">@item.Name</h5>
+                <a asp-route-id="@item.Id" style="text-decoration:none; color: black"><h5 class="me-5 @(ViewBag.Category==item.Id?"fw-bold":"")">@item.Name</h5></a>
             }
         </div>
         <div class="row">
@@ -20,11 +21,6 @@
                         <div class="text-center">
                             <img src="~/images/@item.Category.Image" class="mb-4">
                             <h4>@item.Name</h4>
-                            @*@foreach (TeacherToGroup teacher in item.TeacherToGroups)
-                            {
-                                <p class="mb-0">@teacher.Teacher.Name</p>
-                            }*@
-
                             <p>Telebe sayi: @item.StudentCount</p>
                             <a class="btn btn-success mt-3" asp-controller="Student" asp-action="Index" asp-route-id="@item.Id">Etrafli</a>
                         </div>

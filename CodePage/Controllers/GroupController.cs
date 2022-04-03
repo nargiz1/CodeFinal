@@ -1,4 +1,5 @@
 ﻿using CodePage.DAL;
+using CodePage.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,7 +20,12 @@ namespace CodePage.Controllers
         {
             ViewBag.Categories = db.Categories.ToList();
             ViewBag.Category = id;
-            return View(db.Groups.Include(x=> x.Category).Include(x=> x.TeacherToGroups).Where(x=> x.CategoryId==id).ToList());
+            if (id != null)
+            {
+                return View(db.Groups.Include(x => x.Category).Include(x => x.TeacherToGroups).ThenInclude(x=>x.Teacher).Where(x => x.CategoryId == id).ToList());
+            }
+            return View(db.Groups.Include(x => x.Category).Include(x => x.TeacherToGroups).ToList());
+            
         }
     }
 }

@@ -20,12 +20,12 @@ namespace CodePage.Controllers
         {
             if (id == null) return RedirectToAction("Index", "Group");
             ViewBag.Group = db.Groups.Include(x=> x.Category).FirstOrDefault(x => x.Id == id);
-            return View(await db.Students.Where(x=> x.GroupId==id).ToListAsync());
+            return View(await db.Students.Include(x=> x.Group).Include(x=> x.Group.TeacherToGroups).ThenInclude(x => x.Teacher).Where(x=> x.GroupId==id).ToListAsync());
         }
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return RedirectToAction("Index", "Group");
-            return View(await db.Students.Include(x => x.Group).Include(x=> x.Group.Category).FirstOrDefaultAsync(x => x.Id == id));
+            return View(await db.Students.Include(x => x.Group).Include(x => x.Group.Category).Include(x => x.Group.TeacherToGroups).ThenInclude(x => x.Teacher).FirstOrDefaultAsync(x => x.Id == id));
         }
     }
 }

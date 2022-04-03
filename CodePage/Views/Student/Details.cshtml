@@ -8,7 +8,11 @@
             <div>
                 <h1 class="fw-bold text-light" style="font-size: 65px;">@Model.FullName</h1>
                 <h5>Qrup: @Model.Group.Name</h5>
-                <h5>Muellim: Mammed Aliyev</h5>
+                @foreach (TeacherToGroup item in Model.Group.TeacherToGroups)
+                {
+                    <h5>Muellim: @item.Teacher.Name</h5>
+                }
+                <h5>CAP: @Model.CAP</h5>
                 <h5>Qrup Sahesi: @Model.Group.Category.Name</h5>
                 <h5>Email: @Model.Mail</h5>
                 <h5>Telefon: @Model.Number</h5>

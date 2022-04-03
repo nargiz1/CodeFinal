@@ -348,3 +348,14 @@ C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\V
 C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Details.cshtml.g.cs
 C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Delete.cshtml.g.cs
 C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Edit.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Message\Delete.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Message\Details.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Message\Index.cshtml.g.cs
+C:\Users\Nargizer\Desktop\aspFinal\CodePage\obj\Debug\net5.0\Razor\Areas\Admin\Views\Grade\Add.cshtml.g.cs

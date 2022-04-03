@@ -1,5 +1,6 @@
 ﻿using CodePage.DAL;
 using CodePage.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace CodePage.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class TeacherController : Controller
     {
         private readonly AppDbContext db;

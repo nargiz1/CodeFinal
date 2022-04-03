@@ -24,10 +24,19 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" asp-controller="Home">Ana səhifə/</a>
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Ana səhifə/</a>
                     <a class="nav-link" href="#education">Haqqımızda/</a>
                     <a class="nav-link" href="#contact">Bizimlə əlaqə/</a>
-                    <a class="nav-link" asp-controller="Group" asp-action="Index">Qruplarımız</a>
+                    <a class="nav-link" asp-controller="Group" asp-action="Index" asp-route-id="">Qruplarımız</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link ml-5" href="/account">@User.Identity.Name</a>
+                        <a class="nav-link" href="/account/logout">LogOut</a>
+                    }
+                    else
+                    {
+                        <li class="nav-item ml-5"><a class="nav-link" href="/account/login">LogIn</a></li>
+                    }
                 </div>
             </div>
         </div>

@@ -80,6 +80,19 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTeacher"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Teachers</span>
+                </a>
+                <div id="collapseTeacher" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" asp-area="Admin" asp-controller="Teacher" asp-action="Index">View</a>
+                        <a class="collapse-item" asp-area="Admin" asp-controller="Teacher" asp-action="Add">Add</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTestiTwo"
                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-user"></i>
@@ -105,12 +118,23 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMessage"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-atom"></i>
+                    <span>Messages</span>
+                    <div id="collapseMessage" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" asp-area="Admin" asp-controller="Message" asp-action="Index">View</a>
+                        </div>
+                    </div>
+                </a>
+            </li>
+                <hr class="sidebar-divider">
 
-            <hr class="sidebar-divider">
-
-            <div class="sidebar-heading">
-                Interface
-            </div>
+                <div class="sidebar-heading">
+                    Interface
+                </div>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"

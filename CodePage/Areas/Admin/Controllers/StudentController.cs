@@ -1,6 +1,7 @@
 ﻿using bauen.Utils;
 using CodePage.DAL;
 using CodePage.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 namespace CodePage.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class StudentController : Controller
     {
         private readonly AppDbContext db;
@@ -44,6 +46,9 @@ namespace CodePage.Areas.Admin.Controllers
                     student.UpdateDate = DateTime.Now;
                     student.Image = await student.ImageFile.Upload(env.WebRootPath, @"img/students");
                     await db.Students.AddAsync(student);
+                    await db.SaveChangesAsync();
+                    Group groupToAddStudentTo= await db.Groups.FirstOrDefaultAsync(x => x.Id == student.GroupId);
+                    groupToAddStudentTo.StudentCount++;
                     await db.SaveChangesAsync();
                 }
             }

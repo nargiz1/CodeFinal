@@ -3,7 +3,11 @@
     <div class="container d-flex align-items-center" style="height: 50vh;">
         <div>
             <h1 class="fw-bold text-light" style="font-size: 65px;">@((ViewBag.Group).Name)</h1>
-            <h5>Muellim: Mammed Aliyev</h5>
+            @foreach (TeacherToGroup item in Model[0].Group.TeacherToGroups)
+            {
+                <h5>Muellim: @item.Teacher.Name</h5>
+            }
+
             <h5>Telebe sayi: @((ViewBag.Group).StudentCount)</h5>
             <h5>Qrup Sahesi: @((ViewBag.Group).Category.Name)</h5>
         </div>
