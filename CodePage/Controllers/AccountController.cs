@@ -104,8 +104,7 @@ namespace CodePage.Controllers
         }
         //public async Task<IActionResult> InitRoles()
         //{
-        //    await roleManager.CreateAsync(new IdentityRole("Admin"));
-        //    await roleManager.CreateAsync(new IdentityRole("Member"));
+        //    await roleManager.CreateAsync(new IdentityRole("Teacher"));
         //    return Content("okay");
         //}
     }

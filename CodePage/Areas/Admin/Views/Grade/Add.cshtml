@@ -1,7 +1,7 @@
 ﻿@model Grade
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">@((ViewBag.Student).FullName)</h6>
+        <h6 class="m-0 font-weight-bold text-primary"></h6>
     </div>
     <div class="card-body">
         <form asp-action="Add" method="post" enctype="multipart/form-data">
@@ -11,15 +11,18 @@
                     <input class="form-control" asp-for="Mark">
                     <span class="text-danger small" asp-validation-for="Mark"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="StudentId" class="control-label">Student</label>
+                    <select asp-for="StudentId" class="form-control" asp-items="ViewBag.StudentId"></select>
+                </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-success">Save</button>
-                    <a asp-action="Index" class="btn btn-primary">Go Back</a>
+                    <a asp-controller="Student" asp-action="Index" class="btn btn-primary">Go Back</a>
                 </div>
             </div>
         </form>
     </div>
 </div>
-
 
 @section scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

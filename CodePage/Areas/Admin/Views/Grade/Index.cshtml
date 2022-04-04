@@ -1,0 +1,11 @@
+﻿@model Student
+<div class="row">
+    <div class="col-md-8">
+        <h4>Name: <b>@Model.FullName</b></h4>
+        @foreach (Grade item in Model.Grades)
+        {
+            <h4>Grade: <b>@item.Mark</b></h4>
+        }
+        <a asp-controller="Student" asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

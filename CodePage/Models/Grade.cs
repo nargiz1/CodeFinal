@@ -10,5 +10,6 @@ namespace CodePage.Models
         public int Mark { get; set; }
         public int StudentId { get; set; }
         public Student Student { get; set; }
+        public string TeacherId { get; set; }
     }
 }

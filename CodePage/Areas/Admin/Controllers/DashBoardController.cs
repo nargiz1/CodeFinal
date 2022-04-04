@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace CodePage.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, Teacher")]
     public class DashBoardController : Controller
     {
         private readonly AppDbContext db;
